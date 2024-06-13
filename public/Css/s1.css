@@ -1,0 +1,50 @@
+/* styles.css */
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #DEB887;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #DEB887;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Background color for the rooms section */
+#rooms {
+    background-color: #f9f9f9;
+}
+

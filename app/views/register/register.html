@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Register Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <div id="response"></div>
+  </div>
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+      var responseContainer = document.getElementById('response');
+      
+      // Example validation
+      if (!username || !email || !password || !confirmPassword) {
+        responseContainer.innerHTML = '<p id="error">Please fill out all fields.</p>';
+        return;
+      }
+      
+      if (password !== confirmPassword) {
+        responseContainer.innerHTML = '<p id="error">Passwords do not match.</p>';
+        return;
+      }
+      
+      // Simulating registration
+      setTimeout(function() {
+        responseContainer.innerHTML = '<p>Registration successful!</p>';
+        alert("Your details have been submitted");
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
+
